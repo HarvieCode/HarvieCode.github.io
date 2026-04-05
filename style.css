@@ -1,123 +1,153 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+body{
+    background:linear-gradient(135deg,#02110e,#052b24,#02110e);
+    color:#d6fff7;
 }
 
-body {
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: white;
+.main{
+    max-width:1100px;
+    margin:auto;
+    padding:40px;
 }
 
-/* NAV */
-header {
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.3);
-  padding: 15px 50px;
+.profile-header{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    background:#031c17;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 20px #00ffc344;
+    margin-bottom:25px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
+.profile-img-box{
+    position:relative;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
+.profile-img{
+    width:110px;
+    height:110px;
+    border-radius:15px;
+    border:3px solid #00ffc3;
 }
 
-nav li {
-  margin-left: 20px;
+.floating-badges{
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
+.floating-badges span{
+    background:#00ffc3;
+    color:#02110e;
+    padding:3px 8px;
+    border-radius:8px;
+    font-size:11px;
+    animation:float 3s infinite ease-in-out;
 }
 
-nav a:hover {
-  color: #38bdf8;
+.profile-info h1{
+    color:#00ffc3;
 }
 
-/* HERO */
-.hero {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle, #1e293b, #020617);
-  text-align: center;
+.location,.course,.email{
+    font-size:14px;
+    color:#b9fff0;
 }
 
-.hero span {
-  color: #38bdf8;
+.social-icons{
+    margin-top:10px;
 }
 
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #38bdf8;
-  color: black;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: 0.3s;
+.social-icons a{
+    margin-right:10px;
+    padding:6px 12px;
+    border:1px solid #00ffc3;
+    border-radius:10px;
+    color:#00ffc3;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.btn:hover {
-  transform: scale(1.1);
+.social-icons a:hover{
+    background:#00ffc3;
+    color:#02110e;
 }
 
-/* SECTIONS */
-section {
-  padding: 80px 20px;
-  text-align: center;
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
-/* PROJECTS */
-.project-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.card{
+    background:#031c17;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 15px #00ffc344;
+    transition:.3s;
 }
 
-.card {
-  background: rgba(255,255,255,0.05);
-  margin: 15px;
-  padding: 20px;
-  width: 250px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px #00ffc366;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.05);
+.card h2{
+    color:#00ffc3;
+    margin-bottom:10px;
 }
 
-/* ANIMATIONS */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
+.card ul{
+    padding-left:20px;
 }
 
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
+.github-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    border:1px solid #00ffc3;
+    border-radius:10px;
+    color:#00ffc3;
+    text-decoration:none;
+    transition:.3s;
 }
 
-/* FOOTER */
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #020617;
+.github-btn:hover{
+    background:#00ffc3;
+    color:#02110e;
+}
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    padding:20px;
+    border-top:1px solid #00ffc355;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);} 
+    50%{transform:translateY(-5px);} 
+    100%{transform:translateY(0);} 
+}
+
+@media(max-width:768px){
+    .profile-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
 }
