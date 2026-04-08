@@ -33,15 +33,18 @@ body {
 .profile-img-box {
     position: relative;
     flex-shrink: 0;
-    margin-right: 35px; /* Added: ensures floating badges don't cover text */
+    margin-right: 35px; /* Space for the badges */
 }
 
 .profile-img {
     width: 130px;
     height: 130px;
     border-radius: 15px;
-    border: 3px solid #00ffc3;
-    object-fit: cover; /* Added: keeps image from stretching */
+    /* --- BORDER RESTORED & ENHANCED --- */
+    border: 4px solid #00ffc3; 
+    box-shadow: 0 0 15px #00ffc366; 
+    /* ---------------------------------- */
+    object-fit: cover;
     display: block;
 }
 
@@ -70,7 +73,7 @@ body {
     animation: float 3s infinite ease-in-out;
 }
 
-/* Profile Info */
+/* Profile Text Info */
 .profile-info h1 {
     color: #00ffc3;
     font-size: 2.2rem;
@@ -176,13 +179,14 @@ footer {
     opacity: 0.7;
 }
 
-/* Animation Fix: Preserves vertical centering while floating horizontally */
+/* Animation Fix: Maintains vertical center while floating */
 @keyframes float {
     0% { transform: translateY(-50%) translateX(0); }
     50% { transform: translateY(-50%) translateX(6px); }
     100% { transform: translateY(-50%) translateX(0); }
 }
 
+/* Responsive adjustments */
 @media(max-width: 768px) {
     .profile-header {
         flex-direction: column;
@@ -191,9 +195,6 @@ footer {
     .profile-img-box {
         margin-right: 0;
         margin-bottom: 20px;
-    }
-    .floating-badges {
-        right: -20px;
     }
     .grid {
         grid-template-columns: 1fr;
