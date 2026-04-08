@@ -1,184 +1,205 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lab Task 6</title>
+    <title>Lab Task 6 - Display Property</title>
+
     <style>
-        body {
+        body{
             font-family: Arial, sans-serif;
-        }
-
-        .top-input {
-            display: block;
-            width: 180px;
-            padding: 6px;
-            margin-bottom: 6px;
-            border: 1px solid gray;
-        }
-
-        .survey-box {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #f3f3f3;
-            width: 430px;
-            border: none;
-        }
-
-        .survey-box p {
-            display: inline-block;
-            width: 300px;
-            vertical-align: middle;
-            font-size: 14px;
-        }
-
-        .survey-box button {
-            display: inline-block;
-            vertical-align: middle;
-            padding: 5px 10px;
-            border: 1px solid gray;
-            background-color: #e6e6e6;
-            cursor: pointer;
-        }
-
-        .google-section {
-            margin-top: 40px;
+            background-color: #f4f6f9;
             text-align: center;
         }
 
-        .google-logo {
-            display: block;
-            margin: 0 auto;
-            width: 200px;
+        .container{
+            width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
         }
 
-        .google-search {
+        h1{
+            color: #2c3e50;
+        }
+
+        h2{
+            color: #34495e;
+        }
+
+        hr{
+            margin: 40px 0;
+        }
+
+        /* ===================== */
+        /* TEXTBOXES - BLOCK */
+        /* ===================== */
+        .block-input{
             display: block;
-            width: 500px;
+            width: 300px;
             padding: 10px;
-            margin: 15px auto;
-            border-radius: 20px;
-            border: 1px solid #dcdcdc;
-        }
-
-        .signup-container {
-            margin-top: 40px;
-            width: 320px;
-        }
-
-        .name-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 4%;
-        }
-
-        .name-input {
-            width: 48%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
+            margin: 10px auto;
             border-radius: 5px;
+            border: 1px solid gray;
         }
 
-        .email-input {
-            display: block;
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            
-            box-sizing: border-box;
-        }
-
-        .signup-btn {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 6px;
-            background: linear-gradient(to right, #4f8df5, #3b6eea);
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .uber-container {
-            margin-top: 40px;
-            width: 350px;
-            padding: 15px;
-            background-color: #f5f5f5;
-        }
-
-        .uber-container h2 {
-            margin-top: 0;
-        }
-
-        .uber-container input {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            background-color: #e6e6e6;
-        }
-
-        .uber-btn {
+        /* ===================== */
+        /* PARAGRAPH + BUTTONS */
+        /* ===================== */
+        .survey-text{
             display: inline-block;
-            width: 48%;
-            padding: 10px;
+            width: 400px;
+            vertical-align: middle;
+        }
+
+        .survey-btn{
+            display: inline-block;
+            padding: 8px 15px;
+            margin-left: 5px;
+            vertical-align: middle;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
 
-        .request-btn {
+        .yes{
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .no{
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        /* ===================== */
+        /* GOOGLE SECTION */
+        /* ===================== */
+        .google-logo{
+            width: 200px;
+            margin: 20px 0;
+        }
+
+        .google-search{
+            width: 400px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid gray;
+        }
+
+        /* ===================== */
+        /* SIGN UP FORM */
+        /* ===================== */
+        .signup-input{
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        .email-input{
+            display: block;
+            width: 350px;
+            margin: 10px auto;
+        }
+
+        .signup-btn{
+            padding: 10px 25px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* ===================== */
+        /* UBER FORM */
+        /* ===================== */
+        .uber-input{
+            display: block;
+            width: 400px;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        .uber-btn{
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .request{
             background-color: black;
             color: white;
         }
 
-        .schedule-btn {
-            background-color: #d9d9d9;
+        .schedule{
+            background-color: lightgray;
         }
 
     </style>
 </head>
+
 <body>
 
-    <input type="text" class="top-input" placeholder="Name">
-    <input type="text" class="top-input" placeholder="Email">
+<div class="container">
 
-    <div class="survey-box">
-        <div style="display:flex; align-items:center; justify-content:space-between;">
-            <p>Thanks for chatting with our <br>customer support. Would you <br>like to take our quick survey?</p>
-            <div>
-                <button>Yes</button>
-                <button>No</button>
-            </div>
-        </div>
-    </div>
+<h1>Lab Task 6</h1>
 
-    <div class="google-section">
-        <img src="google.PNG" class="google-logo">
-        <input type="text" class="google-search" placeholder="Search Google or type a URL">
-    </div>
+<h2>Textboxes (Display: Block)</h2>
 
-    <div class="signup-container">
-        <div class="name-row">
-            <input type="text" class="name-input" placeholder="First name">
-            <input type="text" class="name-input" placeholder="Last name">
-        </div>
-        <input type="text" class="email-input" placeholder="Email">
-        <button class="signup-btn">Sign Up</button>
-    </div>
+<input type="text" placeholder="Name" class="block-input">
+<input type="email" placeholder="Email" class="block-input">
 
-    <div class="uber-container">
-        <h2>Request a ride now</h2>
-        <input type="text" placeholder="Enter pickup location">
-        <input type="text" placeholder="Enter destination">
-        <button class="uber-btn request-btn">Request now</button>
-        <button class="uber-btn schedule-btn">Schedule for later</button>
-    </div>
+<br>
+
+<h2>Paragraph and Buttons (Inline-Block)</h2>
+
+<p class="survey-text">
+    Thanks for chatting with our customer support.
+    Would you like to take our quick survey?
+</p>
+
+<button class="survey-btn yes">Yes</button>
+<button class="survey-btn no">No</button>
+
+<hr>
+
+<h1>Google Search Form</h1>
+
+<img src="images__2_-removebg-preview.png" alt="Google Logo" class="google-logo">
+
+<br>
+
+<input type="text" placeholder="Search Google or type a URL" class="google-search">
+
+<hr>
+
+<h1>Challenge Exercise 8d - Sign Up Form</h1>
+
+<input type="text" placeholder="First Name" class="signup-input">
+<input type="text" placeholder="Last Name" class="signup-input">
+
+<input type="email" placeholder="Email" class="signup-input email-input">
+
+<button class="signup-btn">Sign Up</button>
+
+<hr>
+
+<h1>Challenge Exercise 8e - Uber Request-a-Ride</h1>
+
+<h2>Request a ride now</h2>
+
+<input type="text" placeholder="Enter pickup location" class="uber-input">
+<input type="text" placeholder="Enter destination" class="uber-input">
+
+<button class="uber-btn request">Request now</button>
+<button class="uber-btn schedule">Schedule for later</button>
+
+</div>
 
 </body>
 </html>
-
-
-    
