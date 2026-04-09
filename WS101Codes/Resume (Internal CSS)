@@ -12,7 +12,7 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        background: linear-gradient(to bottom, #3dd590, #2ff297);
+        background: linear-gradient(to bottom, #4a69bd, #6a89cc);
         color: #fff;
     }
 
